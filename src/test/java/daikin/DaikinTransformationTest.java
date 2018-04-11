@@ -480,12 +480,6 @@ public class DaikinTransformationTest
     
     dp.setModeTo(ModeState.HEAT.getState());
     int[] frameToCheck = dp.frameThree;
-//    for (int i = 0; i < realData.length; i++)
-//    {
-//      System.out.println("i:" + i);
-//      System.out.println("ex:" + DaikinPackage.getBin(realData[i]) + " " + DaikinPackage.getHex(realData[i]) + " " + realData[i]);
-//      System.out.println("te:" + DaikinPackage.getBin(frameToCheck[i]) + " " + DaikinPackage.getHex(frameToCheck[i]) + " " + frameToCheck[i]);
-//    }
     assertArrayEquals(realData, frameToCheck);
   }
   
@@ -605,31 +599,4 @@ public class DaikinTransformationTest
     String newConfFile = dp.getLircConfFile(currentConfFile);
     assertEquals(confFileAppend, newConfFile);
   }  
-
-//  @Test
-//  public void testWithRealLircConf()
-//  {
-//    try
-//    {
-//      DaikinPackage dp = new DaikinPackage();
-//      dp.setWorkingState(WorkingState.OFF.getState());
-//      dp.setModeTo(ModeState.AUTO.getState());
-//      dp.setFanTo(FanState.FANSILENT.getState());
-//      dp.setDegreesTo(21);
-//      dp.setTimeTo(DayofWeekState.FRIDAY.getState(), 8, 20);
-//
-//
-//      byte[] encoded = Files.readAllBytes(Paths.get("C:\\Users\\I036200\\Downloads\\ir\\lircdDaikin2.conf"));
-//      String currentConfFile = new String(encoded);
-////      System.out.println(currentConfFile);
-////      System.out.println("==");
-////      System.out.println(dp.getLircConfFile(currentConfFile));
-////      dp.getLircConfFile(currentConfFile);
-//    }
-//    catch (Exception e)
-//    {
-//      // TODO Auto-generated catch block
-//      e.printStackTrace();
-//    }
-//  }
 }
