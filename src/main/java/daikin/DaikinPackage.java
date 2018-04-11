@@ -328,6 +328,14 @@ public class DaikinPackage
   String startPattern = "begin remote\n" + "\n" + "  name  DAIKIN\n" + "  flags RAW_CODES\n" + "  eps            30\n" + "  aeps          100\n" + "\n" + "  gap          34978\n" + "\n" + lircId + "\n";
   String closingPattern = "\n      end raw_codes\n" + "end remote\n";
 
+  public String getStartPattern() {
+    return startPattern;
+  }
+
+  public String getClosingPattern() {
+    return closingPattern;
+  }
+
   public String getLircConfFileFirst()
   {
     StringBuilder sb = new StringBuilder();
