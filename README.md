@@ -1,1 +1,1 @@
-# HomeAutomationServer
+# daikin-lircd-generator
